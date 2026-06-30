@@ -1,0 +1,385 @@
+site_name: 화면상세설계서
+site_description: A2500 HOME screen policy wiki
+docs_dir: content
+site_dir: ../site
+
+not_in_nav: |
+  general-modules/cms-2p/home-analysis-1p2f-phasor-*.md
+  general-modules/cms-2p/home-analysis-1p2f-harmonics-*.md
+  general-modules/cms-2p/home-analysis-1p2f-waveform-*.md
+  a2500/home-analysis-waveform-*.md
+  a2500/home-analysis-harmonics-*.md
+  a2500/home-analysis-phasor-*.md
+
+exclude_docs: |
+  raw_data/**
+
+theme:
+  name: material
+  language: ko
+  features:
+    - navigation.top
+    - content.code.copy
+  palette:
+    scheme: default
+    primary: blue grey
+    accent: blue
+
+extra_css:
+  - stylesheets/clickable-screen.css
+
+extra_javascript:
+  - javascripts/screen-image-toggle.js
+
+nav:
+  - Home: index.md
+  - Codex 문서 정리 주의사항: codex-documentation-notes.md
+  - A2500_AC:
+      - MAIN:
+          - HOME:
+              - VOLTAGE:
+                  - RMS:
+                      - 상태 개요: a2500/home-voltage-rms-states.md
+                      - L-L: a2500/home-voltage-rms.md
+                      - L-N: a2500/home-voltage-rms-ln.md
+                      - L-L Min: a2500/home-voltage-rms-ll-min.md
+                      - L-L Max: a2500/home-voltage-rms-ll-max.md
+                      - L-N Min: a2500/home-voltage-rms-ln-min.md
+                      - L-N Max: a2500/home-voltage-rms-ln-max.md
+                      - 모듈 전환: a2500/home-voltage-rms-module.md
+                  - Fundamental:
+                      - L-L: a2500/home-voltage-fundamental-ll.md
+                      - L-N: a2500/home-voltage-fundamental-ln.md
+                      - L-L Min: a2500/home-voltage-fundamental-ll-min.md
+                      - L-L Max: a2500/home-voltage-fundamental-ll-max.md
+                      - L-N Min: a2500/home-voltage-fundamental-ln-min.md
+                      - L-N Max: a2500/home-voltage-fundamental-ln-max.md
+                  - THD:
+                      - L-L: a2500/home-voltage-thd-ll.md
+                      - L-N: a2500/home-voltage-thd-ln.md
+                      - L-L Max: a2500/home-voltage-thd-ll-max.md
+                      - L-N Max: a2500/home-voltage-thd-ln-max.md
+                  - Frequency: a2500/home-voltage-frequency.md
+                  - Frequency Min: a2500/home-voltage-frequency-min.md
+                  - Frequency Max: a2500/home-voltage-frequency-max.md
+                  - Residual: a2500/home-voltage-residual.md
+                  - Residual Min: a2500/home-voltage-residual-min.md
+                  - Residual Max: a2500/home-voltage-residual-max.md
+              - CURRENT:
+                  - RMS: a2500/home-current-rms.md
+                  - RMS Min: a2500/home-current-rms-min.md
+                  - RMS Max: a2500/home-current-rms-max.md
+                  - Fundamental: a2500/home-current-fundamental.md
+                  - Fundamental Min: a2500/home-current-fundamental-min.md
+                  - Fundamental Max: a2500/home-current-fundamental-max.md
+                  - Demand: a2500/home-current-demand.md
+                  - Demand Peak: a2500/home-current-demand-peak.md
+                  - THD: a2500/home-current-thd.md
+                  - THD Max: a2500/home-current-thd-max.md
+                  - TDD: a2500/home-current-tdd.md
+                  - TDD Max: a2500/home-current-tdd-max.md
+                  - Crest Factor: a2500/home-current-crest-factor.md
+                  - Crest Factor Max: a2500/home-current-crest-factor-max.md
+                  - K-Factor: a2500/home-current-k-factor.md
+                  - K-Factor Max: a2500/home-current-k-factor-max.md
+                  - Leak & Residual: a2500/home-current-leak-residual.md
+                  - Leak & Residual Min: a2500/home-current-leak-residual-min.md
+                  - Leak & Residual Max: a2500/home-current-leak-residual-max.md
+              - POWER:
+                  - Active Power: a2500/home-power-active.md
+                  - Active Power Min: a2500/home-power-active-min.md
+                  - Active Power Max: a2500/home-power-active-max.md
+                  - Reactive Power: a2500/home-power-reactive.md
+                  - Reactive Power Min: a2500/home-power-reactive-min.md
+                  - Reactive Power Max: a2500/home-power-reactive-max.md
+                  - Apparent Power: a2500/home-power-apparent.md
+                  - Apparent Power Min: a2500/home-power-apparent-min.md
+                  - Apparent Power Max: a2500/home-power-apparent-max.md
+                  - Power Factor: a2500/home-power-pf.md
+                  - Power Factor Min: a2500/home-power-pf-min.md
+                  - Power Factor Max: a2500/home-power-pf-max.md
+                  - Demand Active Power: a2500/home-power-demand.md
+                  - Demand Active Power Peak: a2500/home-power-demand-peak.md
+              - ENERGY:
+                  - Active Energy: a2500/home-energy-active.md
+                  - Reactive Energy: a2500/home-energy-reactive.md
+                  - Apparent Energy: a2500/home-energy-apparent.md
+              - ANALYSIS:
+                  - Phasor: a2500/home-analysis-phasor.md
+                  - Harmonics: a2500/home-analysis-harmonics.md
+                  - Waveform: a2500/home-analysis-waveform.md
+                  - Voltage Symm. L-L: a2500/home-analysis-volt-symm-ll.md
+                  - Voltage Symm. L-N: a2500/home-analysis-volt-symm-ln.md
+                  - Voltage Symm. L-L Max: a2500/home-analysis-volt-symm-ll-max.md
+                  - Voltage Symm. L-N Max: a2500/home-analysis-volt-symm-ln-max.md
+                  - Voltage Unbalance: a2500/home-analysis-volt-unbal.md
+                  - Voltage Unbalance Max: a2500/home-analysis-volt-unbal-max.md
+                  - Current Symm.: a2500/home-analysis-curr-symm.md
+                  - Current Symm. Max: a2500/home-analysis-curr-symm-max.md
+                  - Current Unbalance: a2500/home-analysis-curr-unbal.md
+                  - Current Unbalance Max: a2500/home-analysis-curr-unbal-max.md
+              - SYSTEM:
+                  - Description: a2500/home-system-description.md
+                  - Local Time: a2500/home-system-local-time.md
+                  - Network State: a2500/home-system-network-state.md
+                  - A2500M Information: a2500/home-system-a2500m.md
+                  - A2500D Information: a2500/home-system-a2500d.md
+                  - A2550CMZ Information: a2500/home-system-a2550cmz.md
+          - SETUP:
+              - Dashboard: a2500/setup-dashboard.md
+              - MEASUREMENT:
+                  - Voltage: a2500/setup-voltage.md
+                  - Demand: a2500/setup-measurement-demand.md
+                  - Power: a2500/setup-measurement-power.md
+                  - AC/DC: a2500/setup-measurement-acdc.md
+              - EVENT:
+                  - Dip: a2500/setup-event-dip.md
+                  - Swell: a2500/setup-event-swell.md
+                  - PQ Curve: a2500/setup-event-pq-curve.md
+                  - Transient Volt.: a2500/setup-event-transient-volt.md
+                  - Volt. Connection: a2500/setup-event-volt-connection.md
+              - NETWORK:
+                  - Ethernet: a2500/setup-network-ethernet.md
+                  - RS485: a2500/setup-network-rs485.md
+                  - Advanced: a2500/setup-network-advanced.md
+              - DEVICE:
+                  - Main CM: a2500/setup-device-main-cm.md
+                  - Module ID: a2500/setup-device-module-id.md
+                  - External ZCT: a2500/setup-device-external-zct.md
+                  - MCCB Status: a2500/setup-device-mccb-status.md
+              - CONTROL:
+                  - Test Mode: a2500/setup-control-test-mode.md
+                  - Demand Sync: a2500/setup-control-demand-sync.md
+                  - Data Reset: a2500/setup-control-data-reset.md
+              - SYSTEM:
+                  - Description: a2500/setup-system-description.md
+                  - Locale: a2500/setup-system-locale.md
+                  - Local Time: a2500/setup-system-local-time.md
+                  - Summer Time: a2500/setup-system-summer-time.md
+                  - NTP: a2500/setup-system-ntp.md
+                  - LCD/Buzzer: a2500/setup-system-lcd-buzzer.md
+                  - LED: a2500/setup-system-led.md
+                  - Module LCD: a2500/setup-system-module-lcd.md
+  - 일반모듈:
+      - CMS-2P:
+          - 개요: general-modules/cms-2p/index.md
+          - 1P2F:
+              - 개요: general-modules/cms-2p/1p2f.md
+              - HOME:
+                  - Dashboard:
+                      - MAIN: general-modules/cms-2p/home-dashboard-1p2f-main.md
+                      - cms-2p: general-modules/cms-2p/home-dashboard-1p2f-module.md
+                  - VOLTAGE:
+                      - RMS L-L: general-modules/cms-2p/home-voltage-1p2f-ll.md
+                      - RMS L-N: general-modules/cms-2p/home-voltage-1p2f-ln.md
+                      - RMS L-L Min: general-modules/cms-2p/home-voltage-1p2f-ll-min.md
+                      - RMS L-L Max: general-modules/cms-2p/home-voltage-1p2f-ll-max.md
+                      - RMS L-N Min: general-modules/cms-2p/home-voltage-1p2f-ln-min.md
+                      - RMS L-N Max: general-modules/cms-2p/home-voltage-1p2f-ln-max.md
+                      - Fundamental L-L: general-modules/cms-2p/home-voltage-1p2f-fundamental-ll.md
+                      - Fundamental L-N: general-modules/cms-2p/home-voltage-1p2f-fundamental-ln.md
+                      - Fundamental L-L Min: general-modules/cms-2p/home-voltage-1p2f-fundamental-ll-min.md
+                      - Fundamental L-L Max: general-modules/cms-2p/home-voltage-1p2f-fundamental-ll-max.md
+                      - Fundamental L-N Min: general-modules/cms-2p/home-voltage-1p2f-fundamental-ln-min.md
+                      - Fundamental L-N Max: general-modules/cms-2p/home-voltage-1p2f-fundamental-ln-max.md
+                      - THD L-L: general-modules/cms-2p/home-voltage-1p2f-thd-ll.md
+                      - THD L-N: general-modules/cms-2p/home-voltage-1p2f-thd-ln.md
+                      - THD L-L Max: general-modules/cms-2p/home-voltage-1p2f-thd-ll-max.md
+                      - THD L-N Max: general-modules/cms-2p/home-voltage-1p2f-thd-ln-max.md
+                      - Frequency: general-modules/cms-2p/home-voltage-1p2f-frequency.md
+                      - Frequency Min: general-modules/cms-2p/home-voltage-1p2f-frequency-min.md
+                      - Frequency Max: general-modules/cms-2p/home-voltage-1p2f-frequency-max.md
+                      - Residual: general-modules/cms-2p/home-voltage-1p2f-residual.md
+                      - Residual Min: general-modules/cms-2p/home-voltage-1p2f-residual-min.md
+                      - Residual Max: general-modules/cms-2p/home-voltage-1p2f-residual-max.md
+                  - CURRENT:
+                      - RMS: general-modules/cms-2p/home-current-1p2f-rms.md
+                      - RMS Min: general-modules/cms-2p/home-current-1p2f-min.md
+                      - RMS Max: general-modules/cms-2p/home-current-1p2f-max.md
+                      - Fundamental: general-modules/cms-2p/home-current-1p2f-fundamental.md
+                      - Fundamental Min: general-modules/cms-2p/home-current-1p2f-fundamental-min.md
+                      - Fundamental Max: general-modules/cms-2p/home-current-1p2f-fundamental-max.md
+                      - Demand: general-modules/cms-2p/home-current-1p2f-demand.md
+                      - Demand Peak: general-modules/cms-2p/home-current-1p2f-demand-peak.md
+                      - THD: general-modules/cms-2p/home-current-1p2f-thd.md
+                      - THD Max: general-modules/cms-2p/home-current-1p2f-thd-max.md
+                      - TDD: general-modules/cms-2p/home-current-1p2f-tdd.md
+                      - TDD Max: general-modules/cms-2p/home-current-1p2f-tdd-max.md
+                      - Crest Factor: general-modules/cms-2p/home-current-1p2f-crest-factor.md
+                      - Crest Factor Max: general-modules/cms-2p/home-current-1p2f-crest-factor-max.md
+                      - K-Factor: general-modules/cms-2p/home-current-1p2f-k-factor.md
+                      - K-Factor Max: general-modules/cms-2p/home-current-1p2f-k-factor-max.md
+                      - Leak & Residual: general-modules/cms-2p/home-current-1p2f-leak-residual.md
+                      - Leak & Residual Min: general-modules/cms-2p/home-current-1p2f-leak-residual-min.md
+                      - Leak & Residual Max: general-modules/cms-2p/home-current-1p2f-leak-residual-max.md
+                      - Temperature: general-modules/cms-2p/home-current-1p2f-temperature.md
+                      - Temperature Min: general-modules/cms-2p/home-current-1p2f-temperature-min.md
+                      - Temperature Max: general-modules/cms-2p/home-current-1p2f-temperature-max.md
+                  - POWER:
+                      - Active Power: general-modules/cms-2p/home-power-1p2f-active.md
+                      - Active Power Min: general-modules/cms-2p/home-power-1p2f-active-min.md
+                      - Active Power Max: general-modules/cms-2p/home-power-1p2f-active-max.md
+                      - Reactive Power: general-modules/cms-2p/home-power-1p2f-reactive.md
+                      - Reactive Power Min: general-modules/cms-2p/home-power-1p2f-reactive-min.md
+                      - Reactive Power Max: general-modules/cms-2p/home-power-1p2f-reactive-max.md
+                      - Apparent Power: general-modules/cms-2p/home-power-1p2f-apparent.md
+                      - Apparent Power Min: general-modules/cms-2p/home-power-1p2f-apparent-min.md
+                      - Apparent Power Max: general-modules/cms-2p/home-power-1p2f-apparent-max.md
+                      - Power Factor: general-modules/cms-2p/home-power-1p2f-pf.md
+                      - Power Factor Min: general-modules/cms-2p/home-power-1p2f-pf-min.md
+                      - Power Factor Max: general-modules/cms-2p/home-power-1p2f-pf-max.md
+                      - Demand Active Power: general-modules/cms-2p/home-power-1p2f-demand.md
+                      - Demand Active Power Peak: general-modules/cms-2p/home-power-1p2f-demand-peak.md
+                  - ENERGY:
+                      - Active Energy: general-modules/cms-2p/home-energy-1p2f-active.md
+                      - Reactive Energy: general-modules/cms-2p/home-energy-1p2f-reactive.md
+                      - Apparent Energy: general-modules/cms-2p/home-energy-1p2f-apparent.md
+                  - ANALYSIS:
+                      - Phasor: general-modules/cms-2p/home-analysis-1p2f-phasor.md
+                      - Harmonics: general-modules/cms-2p/home-analysis-1p2f-harmonics.md
+                      - Waveform: general-modules/cms-2p/home-analysis-1p2f-waveform.md
+                      - Voltage Symm. L-L: general-modules/cms-2p/home-analysis-1p2f-volt-symm-ll.md
+                      - Voltage Symm. L-N: general-modules/cms-2p/home-analysis-1p2f-volt-symm-ln.md
+                      - Voltage Symm. L-L Max: general-modules/cms-2p/home-analysis-1p2f-volt-symm-ll-max.md
+                      - Voltage Symm. L-N Max: general-modules/cms-2p/home-analysis-1p2f-volt-symm-ln-max.md
+                      - Voltage Unbalance: general-modules/cms-2p/home-analysis-1p2f-volt-unbal.md
+                      - Voltage Unbalance Max: general-modules/cms-2p/home-analysis-1p2f-volt-unbal-max.md
+                      - Current Symm.: general-modules/cms-2p/home-analysis-1p2f-curr-symm.md
+                      - Current Symm. Max: general-modules/cms-2p/home-analysis-1p2f-curr-symm-max.md
+                      - Current Unbalance: general-modules/cms-2p/home-analysis-1p2f-curr-unbal.md
+                      - Current Unbalance Max: general-modules/cms-2p/home-analysis-1p2f-curr-unbal-max.md
+                  - SYSTEM:
+                      - Description: general-modules/cms-2p/home-system-1p2f-description.md
+                      - Local Time: general-modules/cms-2p/home-system-1p2f-local-time.md
+                      - Network State: general-modules/cms-2p/home-system-1p2f-network-state.md
+                      - A2500M Information: general-modules/cms-2p/home-system-1p2f-a2500m.md
+                      - A2500D Information: general-modules/cms-2p/home-system-1p2f-a2500d.md
+                      - A2550CMZ Information: general-modules/cms-2p/home-system-1p2f-a2550cmz.md
+          - 1P2W:
+              - 개요: general-modules/cms-2p/1p2w.md
+              - HOME:
+                  - Dashboard:
+                      - MAIN: general-modules/cms-2p/home-dashboard-1p2w-main.md
+                      - cms-2p: general-modules/cms-2p/home-dashboard-1p2w-module.md
+          - 3P3W:
+              - 개요: general-modules/cms-2p/3p3w.md
+              - HOME:
+                  - Dashboard:
+                      - MAIN: general-modules/cms-2p/home-dashboard-3p3w-main.md
+                      - cms-2p: general-modules/cms-2p/home-dashboard-3p3w-module.md
+          - 3P4W:
+              - 개요: general-modules/cms-2p/3p4w.md
+              - HOME:
+                  - Dashboard:
+                      - MAIN: general-modules/cms-2p/home-dashboard-3p4w-main.md
+                      - cms-2p: general-modules/cms-2p/home-dashboard-3p4w-module.md
+  - 특수모듈:
+      - IRT:
+          - 개요: special-modules/irt/index.md
+          - HOME:
+              - Dashboard: special-modules/irt/home-dashboard.md
+              - MEASUREMENT:
+                  - Temperature: special-modules/irt/home-temperature.md
+                  - Temperature Min: special-modules/irt/home-temperature-min.md
+                  - Temperature Max: special-modules/irt/home-temperature-max.md
+              - SYSTEM:
+                  - Description: special-modules/irt/home-description.md
+                  - A2550IRT Information: special-modules/irt/home-information.md
+          - SETUP:
+              - Dashboard: special-modules/irt/setup-dashboard.md
+              - MEASUREMENT:
+                  - Load Wiring: special-modules/irt/setup-load-wiring.md
+              - EVENT:
+                  - Temperature: special-modules/irt/setup-event-temperature.md
+              - SYSTEM:
+                  - Description: special-modules/irt/setup-description.md
+          - EVENT:
+              - Dashboard: special-modules/irt/event-dashboard.md
+              - MEASUREMENT:
+                  - All: special-modules/irt/event-all.md
+                  - Temperature: special-modules/irt/event-temperature.md
+                  - Etc.: special-modules/irt/event-etc.md
+  - IO모듈:
+      - 개요: io-modules/index.md
+  - A2500_DC:
+      - 개요: io-modules/a2500-dc/index.md
+      - MAIN:
+          - DC_HOME:
+              - Dashboard: io-modules/a2500-dc/home-dashboard.md
+              - VOLTAGE:
+                  - DC: io-modules/a2500-dc/home-voltage-dc.md
+                  - RMS: io-modules/a2500-dc/home-voltage-rms.md
+              - CURRENT:
+                  - DC: io-modules/a2500-dc/home-current-dc.md
+                  - RMS: io-modules/a2500-dc/home-current-rms.md
+                  - DC Residual: io-modules/a2500-dc/home-current-dc-residual.md
+                  - DC Residual Max: io-modules/a2500-dc/home-current-dc-residual-max.md
+                  - RMS Residual: io-modules/a2500-dc/home-current-rms-residual.md
+              - POWER:
+                  - DC: io-modules/a2500-dc/home-power-dc.md
+                  - Real: io-modules/a2500-dc/home-power-real.md
+              - ENERGY:
+                  - DC: io-modules/a2500-dc/home-energy-dc.md
+                  - Real: io-modules/a2500-dc/home-energy-real.md
+              - ANALYSIS:
+                  - Waveform: io-modules/a2500-dc/home-analysis-waveform.md
+              - SYSTEM:
+                  - Description: io-modules/a2500-dc/home-system-description.md
+                  - DO: io-modules/a2500-dc/home-system-do.md
+                  - A2550DCM Information: io-modules/a2500-dc/home-system-a2550dcm.md
+  - 특수모듈_DC:
+      - DCM-50V-80A:
+          - 개요: special-modules-dc/dcm-50v-80a/index.md
+          - HOME:
+              - Dashboard: special-modules-dc/dcm-50v-80a/home-dashboard.md
+              - VOLTAGE:
+                  - DC: special-modules-dc/dcm-50v-80a/home-voltage-dc.md
+                  - RMS: special-modules-dc/dcm-50v-80a/home-voltage-rms.md
+              - CURRENT:
+                  - DC: special-modules-dc/dcm-50v-80a/home-current-dc.md
+                  - RMS: special-modules-dc/dcm-50v-80a/home-current-rms.md
+                  - DC Residual: special-modules-dc/dcm-50v-80a/home-current-dc-residual.md
+                  - DC Residual Min: special-modules-dc/dcm-50v-80a/home-current-dc-residual-min.md
+                  - DC Residual Max: special-modules-dc/dcm-50v-80a/home-current-dc-residual-max.md
+                  - RMS Residual: special-modules-dc/dcm-50v-80a/home-current-rms-residual.md
+              - POWER:
+                  - DC: special-modules-dc/dcm-50v-80a/home-power-dc.md
+                  - Real: special-modules-dc/dcm-50v-80a/home-power-real.md
+              - ENERGY:
+                  - DC: special-modules-dc/dcm-50v-80a/home-energy-dc.md
+                  - Real: special-modules-dc/dcm-50v-80a/home-energy-real.md
+              - ANALYSIS:
+                  - Waveform: special-modules-dc/dcm-50v-80a/home-analysis-waveform.md
+              - SYSTEM:
+                  - Description: special-modules-dc/dcm-50v-80a/home-system-description.md
+                  - A2550DCM Information: special-modules-dc/dcm-50v-80a/home-system-a2550dcm.md
+                  - DO: special-modules-dc/dcm-50v-80a/home-system-do.md
+          - SETUP:
+              - Dashboard: special-modules-dc/dcm-50v-80a/setup-dashboard.md
+              - MEASUREMENT:
+                  - Voltage: special-modules-dc/dcm-50v-80a/setup-measurement-voltage.md
+                  - Current: special-modules-dc/dcm-50v-80a/setup-measurement-current.md
+              - EVENT:
+                  - Voltage: special-modules-dc/dcm-50v-80a/setup-event-voltage.md
+                  - Current: special-modules-dc/dcm-50v-80a/setup-event-current.md
+              - IO:
+                  - DO: special-modules-dc/dcm-50v-80a/setup-io-do.md
+              - CONTROL:
+                  - DC Adjustment: special-modules-dc/dcm-50v-80a/setup-control-dc-adjustment.md
+              - SYSTEM:
+                  - Description: special-modules-dc/dcm-50v-80a/setup-system-description.md
+          - EVENT:
+              - Dashboard: special-modules-dc/dcm-50v-80a/event-dashboard.md
+              - MEASUREMENT:
+                  - All: special-modules-dc/dcm-50v-80a/event-measurement-all.md
+                  - Voltage: special-modules-dc/dcm-50v-80a/event-measurement-voltage.md
+                  - Current: special-modules-dc/dcm-50v-80a/event-measurement-current.md
+                  - Power: special-modules-dc/dcm-50v-80a/event-measurement-power.md
+                  - Etc.: special-modules-dc/dcm-50v-80a/event-measurement-etc.md
+  - Policy Sources: policies/sources.md
+
+markdown_extensions:
+  - attr_list
+  - tables
+  - toc:
+      permalink: true

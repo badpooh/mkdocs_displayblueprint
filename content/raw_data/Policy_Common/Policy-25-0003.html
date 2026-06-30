@@ -1,0 +1,52 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>회의록</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,"Segoe UI","Malgun Gothic",sans-serif;line-height:1.65;color:#1d2430;background:#f4f6f9;margin:0;padding:32px 16px}
+.wrap{max-width:980px;margin:0 auto}
+header.doc{background:#1d2b4f;color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:22px}
+header.doc h1{margin:0 0 6px;font-size:1.45rem}
+header.doc .sub{opacity:.85;font-size:.9rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.meta span{background:rgba(255,255,255,.12);padding:4px 12px;border-radius:20px;font-size:.8rem}
+.meta a{color:#9ec5ff;text-decoration:none}
+.content{background:#fff;border-radius:12px;padding:26px 30px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.content h2{font-size:1.2rem;border-bottom:2px solid #eef0f4;padding-bottom:6px;margin-top:28px}
+.content h3{font-size:1.05rem;margin-top:22px;color:#2b3a5e}
+.content ul{padding-left:22px}.content li{margin-bottom:4px}
+.content table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.88rem}
+.content th,.content td{border:1px solid #dde1e8;padding:6px 10px;text-align:left}
+.content th{background:#f0f3f8}
+.content code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:.85em}
+figure.cap{margin:16px 0;border:1px solid #e3e7ee;border-radius:10px;overflow:hidden;background:#fafbfc}
+figure.cap img{width:100%;display:block;background:#222;border-bottom:1px solid #e3e7ee}
+figure.cap figcaption{padding:11px 14px;font-size:.85rem;color:#39404f}
+figure.cap .fn{display:block;font-family:monospace;font-size:.7rem;color:#94a0b6;margin-bottom:4px}
+figure.cap.asis{border-left:4px solid #d86b6b}
+figure.cap.tobe{border-left:4px solid #44a06b}
+.phasetag{font-size:.72rem;padding:1px 7px;border-radius:4px;color:#fff;margin-right:5px}
+figure.asis .phasetag{background:#c0504d}figure.tobe .phasetag{background:#3f8f5f}
+figure.missing .noimg{padding:18px;background:#fff4f4;color:#b23030;font-size:.85rem;text-align:center}
+footer{text-align:center;color:#9aa3b3;font-size:.76rem;margin-top:24px}
+</style></head><body><div class="wrap">
+<header class="doc"><h1>회의록</h1>
+<div class="sub"> ·  ·  · 미완료</div>
+<div class="meta"><span>🔗 <a href="https://www.notion.so/rootech/Policy-25-0003-27eb9b0c879b804c9099ff962d04be0d" target="_blank">원본 Notion</a></span></div></header>
+<div class="content"><h1>Policy-25-0003 · 장치 재부팅 기능 추가</h1>
+<h2>결정 사항</h2>
+<ul>
+<li>재부팅 기능 추가</li>
+<li>동작 조건: 전면 물리버튼 4개(HOME/SETUP/EVENT/BACK) 10초 Long Press. 통신 명령 등 다른 경로 미지원.</li>
+<li>동작: POWER 제외 LED 소등·LCD Backlight Off 후 재부팅(제어전원 On/Off와 동일). 재부팅 시 하위 모듈은 재부팅 안 함(A2300→A2350, A2500→A2550, A3700→IO 모듈).</li>
+<li>A2500: 기능 추가하되 적용시기 추후 재검토 (Kernel 단 기능, 디스플레이 분리형은 Main 재부팅 가능 여부 확인 필요)</li>
+<li>A7300: 추후 재검토 (기존 Reboot 동작·MCU Reboot 여부·기능 유효성 검토 필요)</li>
+</ul>
+<h2>결정 배경</h2>
+<ul>
+<li>A2300·A3700OLD·A3700N은 물리버튼 4개 약 10초 Press로 재부팅 기능 있음(매뉴얼엔 없음, 통신 재부팅 불가, 하위 모듈은 재부팅 안 함). 원본에 장치별 재부팅 영상(A2300/A3700OLD/A3700N .mp4) 첨부.</li>
+<li>A2500·A7300에 재부팅 기능 추가 요청 — 현장에서 차단기 동작 없이 장치만 재부팅 필요(통신 리셋, 화면 멈춤 해소 등)</li>
+</ul>
+<h2>제품별 적용 이력</h2>
+<p>(적용 이력 없음 — 적용시기 재검토)</p></div>
+<footer>정제본 · 컨텍스트 캡션 적용 · 원본: Policy-25-0003 27eb9b0c879b804c9099ff962d04be0d.md</footer>
+</div></body></html>

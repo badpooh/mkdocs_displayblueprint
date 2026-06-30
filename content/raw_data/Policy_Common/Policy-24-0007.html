@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>회의록</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,"Segoe UI","Malgun Gothic",sans-serif;line-height:1.65;color:#1d2430;background:#f4f6f9;margin:0;padding:32px 16px}
+.wrap{max-width:980px;margin:0 auto}
+header.doc{background:#1d2b4f;color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:22px}
+header.doc h1{margin:0 0 6px;font-size:1.45rem}
+header.doc .sub{opacity:.85;font-size:.9rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.meta span{background:rgba(255,255,255,.12);padding:4px 12px;border-radius:20px;font-size:.8rem}
+.meta a{color:#9ec5ff;text-decoration:none}
+.content{background:#fff;border-radius:12px;padding:26px 30px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.content h2{font-size:1.2rem;border-bottom:2px solid #eef0f4;padding-bottom:6px;margin-top:28px}
+.content h3{font-size:1.05rem;margin-top:22px;color:#2b3a5e}
+.content ul{padding-left:22px}.content li{margin-bottom:4px}
+.content table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.88rem}
+.content th,.content td{border:1px solid #dde1e8;padding:6px 10px;text-align:left}
+.content th{background:#f0f3f8}
+.content code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:.85em}
+figure.cap{margin:16px 0;border:1px solid #e3e7ee;border-radius:10px;overflow:hidden;background:#fafbfc}
+figure.cap img{width:100%;display:block;background:#222;border-bottom:1px solid #e3e7ee}
+figure.cap figcaption{padding:11px 14px;font-size:.85rem;color:#39404f}
+figure.cap .fn{display:block;font-family:monospace;font-size:.7rem;color:#94a0b6;margin-bottom:4px}
+figure.cap.asis{border-left:4px solid #d86b6b}
+figure.cap.tobe{border-left:4px solid #44a06b}
+.phasetag{font-size:.72rem;padding:1px 7px;border-radius:4px;color:#fff;margin-right:5px}
+figure.asis .phasetag{background:#c0504d}figure.tobe .phasetag{background:#3f8f5f}
+figure.missing .noimg{padding:18px;background:#fff4f4;color:#b23030;font-size:.85rem;text-align:center}
+footer{text-align:center;color:#9aa3b3;font-size:.76rem;margin-top:24px}
+</style></head><body><div class="wrap">
+<header class="doc"><h1>회의록</h1>
+<div class="sub"> ·  ·  · 미완료</div>
+<div class="meta"><span>🔗 <a href="https://www.notion.so/rootech/Policy-24-0007-da9e4259fa1243eebe6f39c363bbd417" target="_blank">원본 Notion</a></span></div></header>
+<div class="content"><h1>Policy-24-0007 · 「EVENT」 Refresh/Read All/콤보박스(페이징) 버튼 표시·동작</h1>
+<blockquote>
+<p>Policy-23-0032의 정책 추가.</p>
+</blockquote>
+<h2>결정 사항 — 표시 조건</h2>
+<table>
+<thead>
+<tr>
+<th>버튼</th>
+<th>Shown</th>
+<th>Enabled</th>
+<th>Disabled</th>
+<th>Hidden</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Refresh</td>
+<td>행 선택 해제 시</td>
+<td>Type 필터 리스트에 New 있을 때</td>
+<td>New 없을 때</td>
+<td>행 선택 시</td>
+</tr>
+<tr>
+<td>Read All</td>
+<td>행 선택 해제 시</td>
+<td>전체 필터(Type/Index/Date) 리스트에 Unread 있을 때</td>
+<td>Unread 없을 때</td>
+<td>행 선택 시</td>
+</tr>
+<tr>
+<td>콤보박스(페이징)</td>
+<td>행 선택 해제 시</td>
+<td>전체 필터 리스트에 행 있을 때</td>
+<td>행 없을 때</td>
+<td>행 선택 시</td>
+</tr>
+</tbody>
+</table>
+<h2>결정 사항 — Tap 시 동작</h2>
+<ul>
+<li><strong>Refresh</strong>: ①데이터 새로고침 ②Index·Date 필터 From/To 체크 해제(변경값·정렬은 유지) ③1페이지 이동 ④세로 스크롤 맨 위</li>
+<li><strong>Read All</strong>: 필터링된 행만 Read 처리</li>
+<li><strong>콤보박스 중간 영역</strong>: 팝업 표시/숨김</li>
+<li><strong>콤보박스 좌/우 화살표</strong>: 페이지 이전/다음(순환 구조 — 1페이지에서 좌 화살표 시 끝 페이지로)</li>
+</ul>
+<h2>결정 배경</h2>
+<ul>
+<li>기존 정책(Policy-23-0032)에서 Date/Index 필터링 상황의 버튼 표시·동작 설계가 불명확</li>
+<li>A2500/A3700N 이벤트는 Type 필터(부메뉴)+Read All만 존재. A7300은 Type(부메뉴)·Index·Date 필터(헤더, 정렬 포함). 공통: 메뉴 이동 시 데이터 새로고침.</li>
+<li>「Read All」은 A7300 설계서 Rev1.00·정기회의-20230511에서, 「Refresh」·「콤보박스(페이징)」은 A7300 설계서 Rev1.01에서 추가됨(콤보박스는 이벤트 1000개 페이징).</li>
+</ul>
+<h2>제품별 적용 이력</h2>
+<p>(적용 이력 없음 — 전 제품 미적용)</p></div>
+<footer>정제본 · 컨텍스트 캡션 적용 · 원본: Policy-24-0007 da9e4259fa1243eebe6f39c363bbd417.md</footer>
+</div></body></html>

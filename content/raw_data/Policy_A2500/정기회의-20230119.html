@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>정기회의-20230119</title>
+<style>
+body{font-family:-apple-system,"Segoe UI","Malgun Gothic",sans-serif;line-height:1.65;background:#f4f6f9;color:#1d2430;margin:0;padding:30px 16px}
+.wrap{max-width:980px;margin:0 auto} header{background:#1d2b4f;color:white;border-radius:14px;padding:22px 26px;margin-bottom:22px}
+h1{margin:0 0 6px;font-size:1.45rem} .sub{opacity:.86} .meta{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
+.meta span{background:rgba(255,255,255,.13);border-radius:18px;padding:4px 11px;font-size:.82rem} a{color:#9ec5ff;text-decoration:none}
+.content{background:white;border-radius:12px;padding:26px 30px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.content h1{color:#1d2b4f} .content h2{font-size:1.16rem;border-bottom:2px solid #edf0f5;padding-bottom:6px;margin-top:28px;color:#1d2b4f}
+.content h3{font-size:1.02rem;margin-top:22px;color:#2b3a5e}
+pre{white-space:pre-wrap;font-family:-apple-system,"Segoe UI","Malgun Gothic",sans-serif;margin:0 0 12px}
+figure.cap{margin:16px 0;border:1px solid #e3e7ee;border-radius:10px;overflow:hidden;background:#fafbfc}
+figure.cap img{width:100%;display:block;background:#222;border-bottom:1px solid #e3e7ee}
+figure.cap figcaption{padding:10px 13px;font-size:.85rem;color:#39404f} figure.cap figcaption span{display:block;font-family:Consolas,monospace;font-size:.72rem;color:#8b96aa;margin-bottom:4px}
+figure.asis{border-left:4px solid #d86b6b} figure.tobe{border-left:4px solid #44a06b} .noimg{padding:16px;color:#b23030;background:#fff4f4}
+footer{text-align:center;color:#9aa3b3;font-size:.76rem;margin-top:24px}
+</style></head><body><div class="wrap">
+<header><h1>정기회의-20230119</h1><div class="sub">정기회의 · 2023-01-19 · 처리완료</div><div class="meta"><span>정기회의-20230119 790429e524224da88c61ea97bb10b5d0.md</span><span><a href="https://www.notion.so/rootech/%EC%A0%95%EA%B8%B0%ED%9A%8C%EC%9D%98-20230119-790429e524224da88c61ea97bb10b5d0" target="_blank">원본 Notion</a></span></div></header>
+<div class="content"><pre>
+</pre><h1>정기회의-20230119</h1><pre>
+
+</pre><h2>안건 1: CMS모듈의 단독사용 가능여부</h2><pre>
+- 👉 ZM없이 CMS모듈 단독사용 가능함
+
+</pre><h2>안건 2: 「ChainView」 장치종류표시 `← 「정기회의-20230330」에서 결정사항 일부 수정됨`</h2><pre>
+- AsIs
+    - CM은 표시안함
+    - 문자열 크기로 우측 배치
+- ToBe
+    - CM도 표시
+    - 하단부 전체 사용 (가운데정렬)
+- [결정필요]
+    - CMS_1P3F, CMS_1P2F를 구분해서 표시해야하는가?
+    - 👉 CMS는 삼상과 단상만 구분 (1P3F, 1P2F는 구분하지 않음)
+    - 👉 CMS단독과 CMS+ZM(결합)으로 구분
+
+</pre><h2>안건 3: 「HOME &gt; Dashboard」 CMS/ZM 모듈에 따른 표시</h2><pre>
+- MainCM이 CMS_3P4W 로 지정 : CMZ_3P 모듈과 동일
+- MainCM이 CMS_1P3F, CMS_1P2F 로 지정
+    - 「CURRENT」 영역, 우상단에 「Fd.1」 버튼 표시
+        - Tap시, 「Fd.1」, 「Fd.2」, 「Fd.3」 순으로 순환됨
+            - 「CURRENT」 영역의 평균전류, 누설전류 값이 선택피더의 값으로 표시 변경됨
+            - 「CURRENT」, 「POWER」, 「ENERGY」, 「ANALYSIS」 영역의 값이 선택피더의 값으로 표시 변경됨
+                - 우상단에 선택된피더 램프도 문자열 표시 변경됨
+            - 「SYSTEM」 영역의 값도 모듈선택창이 &quot;MAIN&quot;이 아닌 경우는, 「POWER」 영역처럼 표시 변경됨
+        - 👉 「ANALYSIS」 영역은 항상 전압3개만 표시 : 선택피더에 무관
+    - [결정필요]
+        - 「VOLTAGE」 도 선택피더에 따라, 상별로 값 표시??
+        - 👉 선택피더에 따라, 상별로 표시
+
+</pre><h2>안건 4: 「HOME &gt; Dashboard &gt; ANALYSIS」 Waveform 표시항목</h2><pre>
+- AsIs : 전압 3개
+    - 참고 : A3700은 A상 전압, A상 전류만 표시 (HW 한계)
+- ToBe : 전압 3개 + 상선택(or 선택피더)에 따라 전류 표시
+    - MainCM 미지정 : 전압 3개
+    - MainCM이 삼상모듈로 지정 : 전압 3개, 전류 3개
+        - CM_3P, CMZ_3P, CMS_3P4W
+    - MainCM이 단상모듈로 지정 : 상선택에 따라 전압 1개, 전류 1개
+        - CM_1P, CMZ_1P, CMS_1P3F, CMS_1P2F
+        - 예) B상 단상모듈이면, 전압 B상, 전류 B상
+- [결정필요]
+    - ZCT 파형도 표시??
+- 👉 현재유지 (전압3개)
+
+</pre><h2>안건 5: 「StatusView」 피더정보 표시 `← 「정기회의-20230209」에서 결정됨`</h2><pre>
+- 피더정보
+    - AsIs : “Feeder1”, “Feeder2”, “Feeder3”으로 문자열 고정
+    - Tobe : 「SETUP &gt; SYSTEM &gt; Description &gt; User-defined Info」의 문자열 표시
+        - 👉 User-defined Info를 표시하고, 입력안한 경우에는 “Feeder1”~~”~3”을 표시
+- ⏭️ MCCB 상태 기호표시 방법은 표준등을 확인(by변영복) 후 결정하기로 함
+
+</pre><h2>안건 6: 글자수에 따라 줄임표 표시 수정 : “..”(아래점 2개) → “…”(아래점 3개)</h2><pre>
+- 「HOME &gt; Dashboard &gt; SYSTEM &gt; Location」
+    - AsIs : 15자 초과시, “..” 표시
+    - ToBe : 12자 초과시, “...” 표시
+- 「SETUP &gt; Dashboard &gt; SYSTEM &gt; Location」
+    - AsIs : 13자 초과시, “..” 표시
+    - ToBe : 12자 초과시, “...” 표시
+- 참고 : 현재, 글자수에 따라 폰트크기 변경됨 : 7자 이하 50pt, 초과 32pt
+    - 「HOME &gt; Dashboard &gt; ENERGY」
+    - 「HOME &gt; Dashboard &gt; SYSTEM &gt; Location」
+- 👉 “…”(아래점 3개) 사용하기로함
+
+</pre><h2>안건 7: 추가안건 - 인입모듈(MAIN)에 설정가능한 모듈 종류</h2><pre>
+- 👉 모듈 종류를 제한하지 않음 (연결된 모든 모듈이 MainCM으로 선택 가능함)
+    - 단, CM계열이 아닌 모듈을 선택하면, 데이터가 대부분 “-”로 표시됨
+
+</pre><h2>안건 8: 추가안건 - 「HOME &gt; Dashboard」 상표시 문구 변경</h2><pre>
+- 👉 “A” → “Phase-A”
+    - “AB” → “Phase-AB”
+
+</pre><h2>안건 9: 추가안건 - 정기회의 진행여부</h2><pre>
+- 👉 정기회의로 진행
+    - 다음회의는 2023/02/02_10:00~11:00, 14층 1회의실
+
+</pre><h2>비고</h2><pre>
+- 관련 Task는 「DB-Task」 참고
+    - [A2550CMS/ZM-설계추가-Rev0.91~0.95 화면설계](https://app.notion.com/p/A2550CMS-ZM-Rev0-91-0-95-b9117df45d7b486593f29214b9c86a73?pvs=21)</pre></div><footer>Accura A2500 회의록 · 정기회의-20230119</footer>
+</div></body></html>

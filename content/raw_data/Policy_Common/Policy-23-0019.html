@@ -1,0 +1,80 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1"><title>회의록</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,"Segoe UI","Malgun Gothic",sans-serif;line-height:1.65;color:#1d2430;background:#f4f6f9;margin:0;padding:32px 16px}
+.wrap{max-width:980px;margin:0 auto}
+header.doc{background:#1d2b4f;color:#fff;border-radius:14px;padding:22px 26px;margin-bottom:22px}
+header.doc h1{margin:0 0 6px;font-size:1.45rem}
+header.doc .sub{opacity:.85;font-size:.9rem}
+.meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.meta span{background:rgba(255,255,255,.12);padding:4px 12px;border-radius:20px;font-size:.8rem}
+.meta a{color:#9ec5ff;text-decoration:none}
+.content{background:#fff;border-radius:12px;padding:26px 30px;box-shadow:0 1px 4px rgba(0,0,0,.06)}
+.content h2{font-size:1.2rem;border-bottom:2px solid #eef0f4;padding-bottom:6px;margin-top:28px}
+.content h3{font-size:1.05rem;margin-top:22px;color:#2b3a5e}
+.content ul{padding-left:22px}.content li{margin-bottom:4px}
+.content table{border-collapse:collapse;width:100%;margin:14px 0;font-size:.88rem}
+.content th,.content td{border:1px solid #dde1e8;padding:6px 10px;text-align:left}
+.content th{background:#f0f3f8}
+.content code{background:#eef1f6;padding:1px 5px;border-radius:4px;font-size:.85em}
+figure.cap{margin:16px 0;border:1px solid #e3e7ee;border-radius:10px;overflow:hidden;background:#fafbfc}
+figure.cap img{width:100%;display:block;background:#222;border-bottom:1px solid #e3e7ee}
+figure.cap figcaption{padding:11px 14px;font-size:.85rem;color:#39404f}
+figure.cap .fn{display:block;font-family:monospace;font-size:.7rem;color:#94a0b6;margin-bottom:4px}
+figure.cap.asis{border-left:4px solid #d86b6b}
+figure.cap.tobe{border-left:4px solid #44a06b}
+.phasetag{font-size:.72rem;padding:1px 7px;border-radius:4px;color:#fff;margin-right:5px}
+figure.asis .phasetag{background:#c0504d}figure.tobe .phasetag{background:#3f8f5f}
+figure.missing .noimg{padding:18px;background:#fff4f4;color:#b23030;font-size:.85rem;text-align:center}
+footer{text-align:center;color:#9aa3b3;font-size:.76rem;margin-top:24px}
+</style></head><body><div class="wrap">
+<header class="doc"><h1>회의록</h1>
+<div class="sub"> ·  ·  · 미완료</div>
+<div class="meta"><span>🔗 <a href="https://www.notion.so/rootech/Policy-23-0019-e392307aa44a4cfdbb16d7a0bfa55e32" target="_blank">원본 Notion</a></span></div></header>
+<div class="content"><h1>Policy-23-0019 · 「SETUP &gt; … &gt; Setup Exit Timeout [sec]」 기능 통일</h1>
+<h2>결정 사항</h2>
+<ul>
+<li>동작: 변경모드/조회모드 무관하게 Setup Exit Timeout 후 HOME모드로 전환. EVENT모드는 모드 유지(자동전환 없음).</li>
+<li>항목명: 「Setup Exit Timeout [sec]」</li>
+<li>범위·디폴트 (메인장치 LCD大 / 모듈장치 LCD小 구분):</li>
+<li>메인장치: 60~3600 (디폴트 600초)</li>
+<li>모듈장치: 5~60 (디폴트 30초) — A2550CM, A2750P</li>
+<li>수정불가(하드웨어 사양): A2350CT 10초/30초 고정</li>
+<li>설정항목은 LCD화면·통신맵에 공개</li>
+<li>적용 우선순위: 신제품 즉시 적용, 기존제품은 연구부 상황에 맞게</li>
+<li>제품별 상세 수정결정은 "Setup Exit Timeout 기능의 제품별 수정결정-20230330" 참고</li>
+</ul>
+<h2>결정 배경</h2>
+<ul>
+<li>기술영업부(안창모) 요청(2023/03/17): A3700에 있던 "설정모드 자동종료(HOME 전환)" 기능이 A3700N·A2500에서 빠짐</li>
+<li>연구개발부 확인: A2700D 개발부터 LCD 큰 제품에는 "설정모드종료" 미적용(현재 모드 명확히 인지 가능). A7300은 계전요소 설정으로 인해 기능 있음.</li>
+<li>기술영업부 추가의견(2023/03/21~24): LCD 크기 무관 전 제품에 기능 필요, 변경/조회모드 모두 일정시간 후 HOME 전환, EVENT는 유지, 항목명 "Setup Exit Timeout [sec]"(A2550의 "LCD Setup Exit Timeout"에서 "LCD" 삭제), 통신맵 공개, 신규제품 즉시·기존제품도 점진 반영</li>
+</ul>
+<h2>제품별 적용 이력</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>적용버전</th>
+<th>담당자</th>
+<th>날짜</th>
+<th>비고</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A7300</td>
+<td>v1.0.0</td>
+<td>박동민</td>
+<td>2024/03/18</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>비고</h2>
+<ul>
+<li>"A2550CMS/ZM-UI 기획" 정기회의에서 결정됨</li>
+</ul></div>
+<footer>정제본 · 컨텍스트 캡션 적용 · 원본: Policy-23-0019 e392307aa44a4cfdbb16d7a0bfa55e32.md</footer>
+</div></body></html>
