@@ -80,6 +80,37 @@
 - `This page documents...`, `Use the screen image...`, `Keep detailed setting behavior...` 같은 영어 자리표시자 정책 문구를 넣지 않는다.
 - 화면을 보고 추측한 단순 설명은 정책으로 쓰지 않는다. 정책 근거가 없으면 빈 정책 섹션을 만들지 않는다.
 
+## 설정사항 표 작성
+
+- SETUP 화면의 설정값, 설정범위, 디폴트는 `## 설정사항` 섹션으로 작성한다.
+- 양식은 `special-modules/irt/setup-load-wiring.md`와 같은 `section-toggle` 접이식 HTML table을 사용한다.
+- 컬럼은 기본적으로 `항목`, `범위`, `디폴트` 3개를 사용한다. 별도 요청이 있을 때만 `비고` 컬럼을 추가한다.
+- 화면 제목 또는 현재 메뉴가 이미 같은 그룹을 나타내면 `{Voltage}` 같은 그룹 헤더 행은 표에 넣지 않는다.
+- Markdown 표보다 아래 HTML table 양식을 우선 사용한다.
+
+```html
+## 설정사항
+
+<details class="section-toggle"><summary>설정사항</summary><div class="section-toggle__body">
+<table>
+  <thead>
+    <tr>
+      <th style="border-right: 1px solid var(--md-typeset-table-color);">항목</th>
+      <th style="border-right: 1px solid var(--md-typeset-table-color);">범위</th>
+      <th>디폴트</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="border-right: 1px solid var(--md-typeset-table-color);">항목명</td>
+      <td style="border-right: 1px solid var(--md-typeset-table-color);">범위</td>
+      <td>디폴트</td>
+    </tr>
+  </tbody>
+</table>
+</div></details>
+```
+
 ## 검증
 
 - 변경 후 `mkdocs build`를 실행한다.
